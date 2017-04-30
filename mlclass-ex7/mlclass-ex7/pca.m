@@ -20,7 +20,9 @@ S = zeros(n);
 %       number of examples).
 %
 
-
+M_sigma=(1/m)*(X'*X);%matriz covariante
+[U,S,V]=svd(M_sigma);% devuelve matriz U de vectores propios , y matriz diagonal S
+%de valores propios.
 
 
 
