@@ -13,9 +13,15 @@ centroids = zeros(K, size(X, 2));
 %               the dataset X
 %
 
+% Randomly reorder the indices of examples
+randidx = randperm(size(X, 1));
+% Take the first K examples as centroids
+centroids = X(randidx(1:K), :);
 
-
-
+%The code above first randomly permutes the indices of the examples (us-
+%ing randperm). Then, it selects the first K examples based on the random
+%permutation of the indices. This allows the examples to be selected at ran-
+%dom without the risk of selecting the same example twice.
 
 
 
