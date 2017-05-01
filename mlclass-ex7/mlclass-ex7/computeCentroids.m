@@ -26,9 +26,11 @@ centroids = zeros(K, n);
 % Note: You can use a for-loop over the centroids to compute this.
 %
 
-
-
-
+A=[X idx];
+for i=1:K
+  B=A(A(:,n+1)==i,1:n);
+  centroids(i,:)=mean(B);
+end
 
 
 
